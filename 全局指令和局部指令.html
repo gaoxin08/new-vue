@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text">
+            <input type="text">
+            <input type="text" v-focus>
+            <input type="text">
+            <input type="text" v-red>
+            <hr>
+            <p v-red>我是p标签</p>
+        </div>
+
+        <script src="./vue.js"></script>
+        <script>
+            Vue.directive('focus',{
+                inserted(el) {
+                    console.log(111)
+                    el.focus()
+                }
+            })
+
+            const vm = new Vue({
+                el: '#app',
+                data: {
+                    msg: 'hello vue'
+                },
+                directives:{
+                    red:{
+                        inserted(el){
+                            el.style.color = 'red'
+                        }
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
