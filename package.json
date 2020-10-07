@@ -174,5 +174,8 @@
   "sideEffects": false,
   "typings": "types/index.d.ts",
   "unpkg": "dist/vue.js",
-  "version": "2.6.12"
+  "version": "2.6.12",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
 }
