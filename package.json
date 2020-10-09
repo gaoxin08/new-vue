@@ -176,6 +176,7 @@
   "unpkg": "dist/vue.js",
   "version": "2.6.12",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.20.0",
+    "vue-router": "^3.4.6"
   }
 }

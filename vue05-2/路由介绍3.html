@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#/home">主页</a>
+    <a href="#/list">列表页</a>
+    <a href="#/login">登录页</a>
+    <div id="content"></div>
+
+    <script>
+        window.addEventListener('hashchange',function(){
+            console.log('hash值变化了')
+
+            console.log(location.hash)
+
+                    // 根据不同的hash值，显示不同的内容到content区域
+        switch (location.hash) {
+          case '#/home':
+            document.getElementById('content').innerHTML = '这里主页的内容'
+            break
+          case '#/list':
+            document.getElementById('content').innerHTML = '列表页'
+            break
+          case '#/login':
+            document.getElementById('content').innerHTML = '登录页的内容'
+            break
+          default:
+            break
+        }
+
+        })
+    </script>
+</body>
+</html>
